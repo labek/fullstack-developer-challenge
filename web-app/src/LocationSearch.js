@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { Container, Divider, Loader } from 'semantic-ui-react';
 import PostalCodeForm from './PostalCodeForm';
-import LocationSearchResults from './LocationSearchResults';
+// import LocationSearchResults from './LocationSearchResults';
+import LocationSearchHistory from './LocationSearchHistory';
 
 class LocationSearch extends Component {
   constructor(props) {
@@ -51,10 +52,14 @@ class LocationSearch extends Component {
         <Divider hidden />
         {loading && <Loader active />}
         {locations && (
-          <LocationSearchResults
-            locations={locations}
+          <LocationSearchHistory
             postalCodeSearchValue={postalCodeSearchValue}
+            locations={locations}
           />
+          // <LocationSearchResults
+          //   locations={locations}
+          //   postalCodeSearchValue={postalCodeSearchValue}
+          // />
         )}
       </Container>
     );
