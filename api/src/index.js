@@ -20,7 +20,7 @@ app.use(cors());
 
 app.use('*', logQuery);
 
-app.get('/locations', locationsRouter);
+app.use('/locations', locationsRouter);
 app.get('/postal-codes', postalCodesRouter);
 
 app.use(handleError);
