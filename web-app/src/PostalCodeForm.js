@@ -22,6 +22,7 @@ class PostalCodeForm extends Component {
 
     submitEvent.preventDefault();
     onSubmittedData({ postalCodeSearchValue });
+    this.setState({ postalCodeSearchValue: '' })
   }
 
   render() {
