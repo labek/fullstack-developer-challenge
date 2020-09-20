@@ -15,6 +15,7 @@ class PostalCodesDataContainer extends EventEmitter {
     super();
 
     this.data = null;
+    this.loaded = false;
     this.init();
   }
 
@@ -63,6 +64,7 @@ class PostalCodesDataContainer extends EventEmitter {
 
       logger.info('Postal codes data container: Initialized.');
       this.emit('initialized');
+      this.loaded = true;
     } catch (initError) {
       logger.error(initError);
       this.emit('error', initError);
