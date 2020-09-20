@@ -47,7 +47,11 @@ locationsRouter.get('/countries', (req, res) => {
     }
   }
 
-  const formattedData = Object.entries(data);
+  const formattedData = Object.entries(data).map(([key, value]) => ({
+    country: key,
+    count: value,
+  }));
+
   const csvData = parse(formattedData);
 
   res.header('Content-Type', 'text/csv').send(csvData);
