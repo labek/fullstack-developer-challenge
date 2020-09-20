@@ -1,0 +1,32 @@
+.LocationSearchHistory {
+}
+
+.LocationSearchHistory__mainContainer {
+}
+
+.LocationSearchHistory__searchContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: darkgrey;
+  color: #ffffff;
+  margin: 10px;
+}
+
+.LocationSearchHistory__searchValue {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  height: 30px;
+  border-right: 1px solid #ffffff;
+}
+
+.LocationSearchHistory__countValue {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  height: 30px;
+}
